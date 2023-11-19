@@ -13,6 +13,9 @@ public static final int BACK_RIGHT_PORT = 0;
 public static final int ARM1_PORT = 0;
 public static final int ARM2_PORT = 0;
 public static final int INTAKE_MOTOR_PORT = 0;
+public static final int CLIMB_MOTOR_PORT = 0;
+public static final int DRIVER_RB_PORT = 0;
+public static final int DRIVER_LB_PORT = 0;
 
 
 
