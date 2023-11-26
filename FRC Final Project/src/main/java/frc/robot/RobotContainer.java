@@ -41,7 +41,11 @@ public class RobotContainer {
      
     driveTrain.setDefaultCommand(new RunCommand(() ->
      driveTrain.drive(driver.getRawAxis(0), driver.getRawAxis(4)), driveTrain));
-    // Configure the trigger bindings
+
+    climb.setDefaultCommand(new RunCommand(() -> 
+    climb.controlClimb(manip.getRawAxis(0)), climb));
+
+     // Configure the trigger bindings
     configureBindings();
   }
 
@@ -64,7 +68,7 @@ public class RobotContainer {
     //Pneumatics 
     new JoystickButton(driver, 7).onTrue(new InstantCommand(pneumatics::stopCompress, pneumatics));
     new JoystickButton(manip, 8).onTrue(new InstantCommand(pneumatics::setForward, pneumatics));
-
+    
     
   }
 
